@@ -9,30 +9,23 @@
 </head>
 <body>
   <header class="masthead">
-    <a class="brand" href="#top" aria-label="Till toppen"><span class="brandmark">B</span><span>Biblioteken<br><i>i siffror</i></span></a>
+    <a class="site-title" href="#top">Svensk biblioteksstatistik <span>2014–2025</span></a>
     <nav aria-label="Huvudmeny"><a href="#utveckling">Utveckling</a><a href="#karta">Karta</a><a href="#om">Om data</a></nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Svensk biblioteksstatistik · 2014–2025</p>
-        <h1>Hur mår ditt<br><em>bibliotek?</em></h1>
-        <p class="lede">Se hur folkbiblioteken förändras över tid – från besök och lån till bemanning och serviceställen.</p>
-      </div>
-      <div class="hero-stat" aria-hidden="true"><span>290</span><small>kommuner<br>att utforska</small></div>
-    </section>
-
     <section class="controls" aria-label="Val">
-      <label><span>Kommun</span><div class="select-wrap"><select id="municipality"></select></div></label>
-      <fieldset><legend>Visning</legend><div class="segmented"><button class="active" data-mode="absolute">Totalt</button><button data-mode="per1000">Per 1 000 inv.</button></div></fieldset>
+      <label><span>Lägg till kommun</span><div class="select-wrap"><select id="municipality"></select></div></label>
+      <fieldset><legend>Visning</legend><div class="segmented"><button class="active" data-mode="absolute">Absoluta tal</button><button data-mode="per1000">Per 1 000 invånare</button><button data-mode="index">Index</button></div></fieldset>
+      <div id="comparison-list" class="comparison-list" aria-label="Valda kommuner"></div>
     </section>
 
     <section id="utveckling" class="panel chart-panel">
-      <div class="section-heading"><div><p class="eyebrow">Tidsserie</p><h2>Utveckling i <span id="selected-name"></span></h2></div><p id="chart-summary" class="summary"></p></div>
+      <div class="section-heading"><div><p class="eyebrow">Tidsserie</p><h2>Kommunjämförelse</h2></div><p id="chart-summary" class="summary"></p></div>
       <div id="metric-picker" class="metric-picker" role="group" aria-label="Statistiska variabler"></div>
-      <div class="chart-wrap"><svg id="chart" viewBox="0 0 1000 430" role="img" aria-labelledby="chart-title"><title id="chart-title">Tidsserie för valda mått</title></svg><div id="tooltip" class="tooltip" hidden></div></div>
-      <p class="chart-note">Varje serie skalas mot sitt eget index (första tillgängliga året = 100) när flera mått visas. Välj ett mått för faktiska värden.</p>
+      <div class="chart-toolbar"><label class="national-toggle"><input id="show-national" type="checkbox" checked> Visa riksgenomsnitt</label></div>
+      <div id="series-legend" class="series-legend" aria-label="Teckenförklaring"></div>
+      <div class="chart-wrap"><svg id="chart" viewBox="0 0 1000 430" role="img" aria-labelledby="chart-title"><title id="chart-title">Tidsserie för kommunjämförelse</title></svg><div id="tooltip" class="tooltip" hidden></div></div>
     </section>
 
     <section id="karta" class="map-section">
@@ -51,7 +44,7 @@
 
     <section id="om" class="about">
       <p class="eyebrow">Om experimentet</p><h2>Offentlig data,<br>gjord <em>begriplig.</em></h2>
-      <div class="about-grid"><p>Underlaget är Kungliga bibliotekets officiella biblioteksstatistik. Kommunnamn och kartgeometri kommer från SCB. Råfilerna är orörda; all sammanställning görs av ett reproducerbart byggscript.</p><p>Luckor betyder att värdet saknas i källan. Ingen imputering görs. Värden per 1 000 invånare använder respektive års invånarantal som KB hämtat från SCB.</p></div>
+      <div class="about-grid"><p>Underlaget är Kungliga bibliotekets officiella biblioteksstatistik. Kommunnamn och kartgeometri kommer från SCB. Råfilerna är orörda; all sammanställning görs av ett reproducerbart byggscript. Luckor betyder att värdet saknas i källan och behandlas aldrig som noll.</p><p><strong>Beräkningar.</strong> Absoluta tal visar kommunens rapporterade värde; riksgenomsnittet är summan dividerad med antalet rapporterande kommuner. Per 1 000 invånare beräknas med samma års folkmängd. För riket summeras värden och folkmängd enbart för kommuner där båda finns. Index sätter varje series första tillgängliga icke-nollvärde till 100. Rikets index bygger på den årsvisa genomsnittliga nivån per rapporterande kommun.</p></div>
     </section>
   </main>
   <footer><span>Biblioteken i siffror</span><span>Ett dataexperiment · 2026</span></footer>
