@@ -34,19 +34,29 @@ SKR-data behövdes inte. Inga data eller någon kod från Fabel, LibData eller B
 - Additiva mått summeras över relevanta rapporteringsenheter inom kommunen.
 - Per 1 000 invånare beräknas som `kommunvärde / Population01 × 1 000` för samma verksamhetsår.
 - Kartans förändring beräknas som `(slutvärde − startvärde) / startvärde × 100`. Förändring visas inte om något värde saknas eller startvärdet är noll.
-- Vid flera serier i diagrammet indexeras varje serie mot sitt första tillgängliga, icke-nollvärde (= 100). Det gör mått med olika enheter jämförbara. Med en serie visas faktiska värden.
+- Tidsseriediagrammet visar en variabel åt gången för en eller flera kommuner. I indexläget indexeras varje kommun mot sitt första tillgängliga, icke-nollvärde (= 100).
+- Riksgenomsnittet för absoluta tal är det aritmetiska medelvärdet över kommuner som rapporterat måttet det aktuella året.
+- Riksgenomsnittet per 1 000 invånare beräknas som summan av rapporterade värden dividerad med den sammanlagda folkmängden, multiplicerat med 1 000. Endast kommuner där både värde och folkmängd finns ingår i båda summorna.
+- Rikets indexserie bygger på det årsvisa genomsnittliga värdet per rapporterande kommun och indexeras mot sitt första tillgängliga, icke-nollvärde.
 - Inga saknade värden imputeras och inga extrema värden rensas bort.
 
 ## Implementerad funktionalitet
 
-- Sökbart inbyggt kommunval (webbläsarens standardkontroll).
+- Inbyggt kommunval med möjlighet att lägga till och ta bort flera jämförelsekommuner.
 - Nio variabler: fysiska besök, fysiska lån, aktiva låntagare, bemannade serviceställen, årsverken, fysiskt bestånd, publika aktiviteter, driftskostnader och bokbussar.
-- Upp till fyra variabler samtidigt i ett tillgängligt SVG-diagram med pekverktygstips.
-- Absoluta värden och värden per 1 000 invånare.
+- En variabel åt gången i ett tillgängligt SVG-diagram, med en färgkodad serie per vald kommun och pekverktygstips.
+- Absoluta värden, värden per 1 000 invånare och index med redovisade basår.
+- Valbart riksgenomsnitt med beräkningar anpassade till visningsläget.
 - Rikstäckande, klickbar förändringskarta med valfritt mått och valfria jämförelseår.
 - Direktkoppling mellan karta och tidsserie.
 - Responsiv layout för mobil och dator.
 - Reproducerbar byggprocess och automatiska dataintegritetstester.
+
+## Senare gränssnittsjusteringar
+
+- Den inledande presentationsytan ersattes av ett kompakt sidhuvud så att statistikverktyget möter användaren direkt.
+- Tidsseriediagrammet byggdes om från jämförelse mellan flera variabler till benchmarking mellan flera kommuner för en vald variabel.
+- Avsnittet *Om experimentet* kompletterades med experimentets strategiska utgångspunkt, fullständiga beräkningsprinciper och en tydlig upplysning om att tjänsten är fristående från Kungliga biblioteket.
 
 ## Avvikelser från Fabel
 
