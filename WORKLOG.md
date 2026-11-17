@@ -15,7 +15,7 @@ Uppgifterna ovan beskriver experimentets genomförande och ska inte tolkas som d
 2. **SCB, Statistikdatabasen.** Metadata från tabellen *Folkmängden efter region, civilstånd, ålder, kön, tabellinnehåll och år* används endast för officiella kommunkoder och kommunnamn (`data/external/scb_population_metadata.json`). Befolkningsvärdena i beräkningarna kommer däremot från `Population01` i KB-filerna; enligt definitionen fyller KB detta fält med SCB:s årssiffror.
 3. **SCB, öppna geodata.** RegSO 2025 via SCB:s WFS används för kartan (`data/external/regso_2025.geojson`). Varje RegSO har en kommunkod. Geometrin förenklas för webben men statistikvärden förändras inte. SCB:s öppna statistik och geodata är CC0.
 
-SKR-data behövdes inte. Inga data eller någon kod från Fabel, LibData eller BibData har använts.
+SKR-data behövdes inte. Applikationen och databearbetningen har utvecklats självständigt med de angivna offentliga källorna som underlag.
 
 ## Dataproblem och hantering
 
@@ -58,12 +58,13 @@ SKR-data behövdes inte. Inga data eller någon kod från Fabel, LibData eller B
 - Tidsseriediagrammet byggdes om från jämförelse mellan flera variabler till benchmarking mellan flera kommuner för en vald variabel.
 - Avsnittet *Om experimentet* kompletterades med experimentets strategiska utgångspunkt, fullständiga beräkningsprinciper och en tydlig upplysning om att tjänsten är fristående från Kungliga biblioteket.
 
-## Avvikelser från Fabel
+## Projektets avgränsningar
 
-- Fabel kunde inte läsas maskinellt från utvecklingsmiljön. Huvudfunktionerna i uppdragsbeskrivningen har därför implementerats självständigt, utan pixel- eller kodmässig efterbildning.
-- Kartan visar procentuell förändring per kommun och valfri variabel; den visar inte enskilda biblioteksadresser eller öppnings-/stängningshändelser.
-- Applikationen har ett avgränsat urval om nio tydliga nyckeltal i stället för samtliga cirka 255 KB-termer.
+- Kartan visar procentuell förändring per kommun och vald variabel; den visar inte enskilda biblioteksadresser eller öppnings- och stängningshändelser.
+- Applikationen använder ett avgränsat urval om nio tydliga nyckeltal i stället för samtliga cirka 255 KB-termer.
+- Tidsserierna omfattar verksamhetsåren 2014–2025 och kommunal folkbiblioteksverksamhet, inklusive integrerade folk- och skolbibliotek.
 - Ingen server, databas, användarinloggning eller exportfunktion ingår. All bearbetad data laddas statiskt i webbläsaren.
+- Verktyget är ett experiment och inte avsett som produktionsfärdig eller officiell statistiktjänst.
 
 ## Uppskattad arbetsinsats
 

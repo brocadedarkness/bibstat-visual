@@ -4,9 +4,10 @@ En fristående, lokal webbapplikation för att utforska svensk folkbibliotekssta
 
 ## Funktioner
 
-- Val bland Sveriges 290 kommuner.
-- Interaktiva tidsserier med upp till fyra samtidiga variabler.
-- Växling mellan absoluta tal och värden per 1 000 invånare.
+- Jämförelse mellan flera av Sveriges 290 kommuner.
+- Interaktiva tidsserier för en av nio valbara variabler åt gången.
+- Växling mellan absoluta tal, värden per 1 000 invånare och index.
+- Valbart riksgenomsnitt anpassat till visningsläget.
 - Klickbar Sverigekarta över procentuell förändring mellan valfria år.
 - Responsiv, byggfri frontend utan ramverk eller externa CDN-beroenden.
 - Reproducerbar Python-pipeline; filerna i `data/raw/` ändras aldrig.
@@ -42,4 +43,4 @@ data/external/* ─┘
 py -3 -m unittest discover -s tests -v
 ```
 
-Testerna bygger data på nytt och kontrollerar bland annat antal kommuner, år, mått, karttäckning och att befolkningsnämnare är rimliga. Se [WORKLOG.md](WORKLOG.md) för källor, antaganden, dataproblem och avvikelser.
+Testerna bygger data på nytt och kontrollerar bland annat antal kommuner, år, mått, karttäckning, kommunjämförelser och riksberäkningar. Se [WORKLOG.md](WORKLOG.md) för källor, antaganden, dataproblem och projektets avgränsningar.
