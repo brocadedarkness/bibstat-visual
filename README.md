@@ -1,6 +1,6 @@
-# Biblioteken i siffror
+# Biblioteksstatistik 2014-2025
 
-En fristående, lokal webbapplikation för att utforska svensk folkbiblioteksstatistik kommunvis 2014–2025. Projektet är ett experiment inspirerat av funktionerna i Fabels bibliotekstjänst, men använder enbart egna bearbetningar av offentliga originaldata från Kungliga biblioteket (KB) och SCB.
+En fristående, lokal webbapplikation för att utforska svensk folkbiblioteksstatistik kommunvis 2014–2025. Projektet är ett experiment och använder enbart egna bearbetningar av offentliga originaldata från Kungliga biblioteket (KB) och SCB.
 
 ## Funktioner
 
